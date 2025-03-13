@@ -69,6 +69,76 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-IIS绑定" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/03/13/IIS%E7%BB%91%E5%AE%9A/" class="article-date">
+  <time class="dt-published" datetime="2025-03-13T07:22:32.000Z" itemprop="datePublished">2025-03-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/03/13/IIS%E7%BB%91%E5%AE%9A/">IIS绑定</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Windows系统IIS绑定"><a href="#Windows系统IIS绑定" class="headerlink" title="Windows系统IIS绑定"></a>Windows系统IIS绑定</h1><p>在Windows 10系统中，IIS的绑定设置位于 IIS管理器 的 网站节点下，以下是详细操作步骤：</p>
+<h2 id="一、打开IIS管理器"><a href="#一、打开IIS管理器" class="headerlink" title="一、打开IIS管理器"></a>一、打开IIS管理器</h2><h3 id="1-通过开始菜单启动："><a href="#1-通过开始菜单启动：" class="headerlink" title="1.通过开始菜单启动："></a>1.通过开始菜单启动：</h3><p>· 点击屏幕左下角【开始】按钮（Windows 系统）。</p>
+<p>· 选择【所有程序】→【Windows 系统】→【IIS 管理器】。</p>
+<h3 id="2-通过快捷键启动："><a href="#2-通过快捷键启动：" class="headerlink" title="2.通过快捷键启动："></a>2.通过快捷键启动：</h3><p>· 直接按键盘上的 Win + R，输入 inetmgr 后按回车。</p>
+<h2 id="二、找到绑定设置"><a href="#二、找到绑定设置" class="headerlink" title="二、找到绑定设置"></a>二、找到绑定设置</h2><h3 id="1-定位到网站节点："><a href="#1-定位到网站节点：" class="headerlink" title="1.定位到网站节点："></a>1.定位到网站节点：</h3><p>· 在IIS管理器左侧的 “连接” 面板中，展开 “网站” 节点。</p>
+<h3 id="2-选择目标网站："><a href="#2-选择目标网站：" class="headerlink" title="2.选择目标网站："></a>2.选择目标网站：</h3><p>· 右键单击需要修改绑定的网站（如 “Default Web Site” 或自定义名称的网站），选择 “绑定…”。</p>
+<h2 id="三、修改绑定端口"><a href="#三、修改绑定端口" class="headerlink" title="三、修改绑定端口"></a>三、修改绑定端口</h2><h3 id="1-在绑定窗口中操作："><a href="#1-在绑定窗口中操作：" class="headerlink" title="1.在绑定窗口中操作："></a>1.在绑定窗口中操作：</h3><p>· 弹出窗口中会显示当前网站的绑定列表（如 http:&#x2F;&#x2F;*:80）。</p>
+<p>· 点击“添加” 按钮，配置新的绑定：</p>
+<p>类型：HTTP<br>IP地址：全部未分配（或指定本地IP）<br>端口：修改为未被占用的端口（如8080）<br>主机名：留空（访问时直接通过IP或新域名）</p>
+<h3 id="2-保存修改："><a href="#2-保存修改：" class="headerlink" title="2.保存修改："></a>2.保存修改：</h3><p>· 点击 “确定” 完成绑定添加，原有绑定可保留或删除（根据需求）。</p>
+<p>· 关闭窗口后，IIS会自动应用新配置。</p>
+<h2 id="四、验证绑定是否生效"><a href="#四、验证绑定是否生效" class="headerlink" title="四、验证绑定是否生效"></a>四、验证绑定是否生效</h2><h3 id="1-检查网站状态："><a href="#1-检查网站状态：" class="headerlink" title="1.检查网站状态："></a>1.检查网站状态：</h3><p>· 返回IIS管理器 → 确认目标网站的 “状态” 为 “已启动”。</p>
+<h3 id="2-测试访问："><a href="#2-测试访问：" class="headerlink" title="2.测试访问："></a>2.测试访问：</h3><p>· 浏览器输入 <a href="http://localhost:新端口（如">http://localhost:新端口（如</a> <a href="http://localhost:8080）。">http://localhost:8080）。</a></p>
+<p>· 如果显示默认页面或靶场内容，说明绑定成功。</p>
+<p><img src="/imgs/IIS%E7%BB%91%E5%AE%9A.png"></p>
+<h2 id="关键界面元素："><a href="#关键界面元素：" class="headerlink" title="关键界面元素："></a>关键界面元素：</h2><ol>
+<li>IIS管理器左侧面板：</li>
+</ol>
+<p>· 连接 → 网站 → 右键目标网站 → “绑定…”。</p>
+<ol start="2">
+<li>绑定窗口：</li>
+</ol>
+<p>· 显示现有绑定（如 http:&#x2F;&#x2F;*:80）。</p>
+<p>· 添加 按钮用于配置新绑定。</p>
+<ol start="3">
+<li>测试访问页面：</li>
+</ol>
+<p>· 浏览器地址栏输入 <a href="http://localhost:新端口。">http://localhost:新端口。</a></p>
+<p>总结</p>
+<p>· 绑定位置：IIS管理器 → 网站节点 → 右键网站 → 绑定。</p>
+<p>· 核心操作：修改端口为未被占用的值（如8080）。</p>
+<p>· 验证方法：浏览器访问 <a href="http://localhost:新端口。">http://localhost:新端口。</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/03/13/IIS%E7%BB%91%E5%AE%9A/" data-id="cm8712iv70001akv3fdoebiue" data-title="IIS绑定" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-image" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/03/09/image/" class="article-date">
@@ -92,51 +162,11 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p><img src="/imgs/image/4dddd6bfc40b23ba9afb5198aa7ebe9.jpg"></p>
-<p>123456789</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/09/image/" data-id="cm816ujp300041ov3188y9qx4" data-title="image" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-12345" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/03/08/12345/" class="article-date">
-  <time class="dt-published" datetime="2025-03-08T13:38:53.000Z" itemprop="datePublished">2025-03-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/03/08/12345/">12345</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><img src="/imgs/12345/1.png"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/08/12345/" data-id="cm816ujov00001ov3h1ta1lx2" data-title="12345" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/09/image/" data-id="cm8712iv90002akv384g6d23t" data-title="image" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -178,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/analysis/" data-id="cm816ujoz00011ov3agcn5r4x" data-title="analysis" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/analysis/" data-id="cm8712iux0000akv32fo5846r" data-title="analysis" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -220,46 +250,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/" data-id="cm816ujp400051ov3cc42e0tq" data-title="图片上传指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Hello" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/01/20/Hello/" class="article-date">
-  <time class="dt-published" datetime="2025-01-20T12:38:39.000Z" itemprop="datePublished">2025-01-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/01/20/Hello/">Hello!!!</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>I’m honored </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/01/20/Hello/" data-id="cm816ujp100021ov3g54g2ihn" data-title="Hello!!!" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/" data-id="cm8712iva0003akv3f5d6fsgi" data-title="图片上传指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -310,7 +301,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/01/20/hello-world/" data-id="cm816ujp200031ov3c12jcu33" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/01/20/hello-world/" data-id="cm8712iva0004akv3e5xkc6o2" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -353,11 +344,11 @@
       <ul>
         
           <li>
-            <a href="/2025/03/09/image/">image</a>
+            <a href="/2025/03/13/IIS%E7%BB%91%E5%AE%9A/">IIS绑定</a>
           </li>
         
           <li>
-            <a href="/2025/03/08/12345/">12345</a>
+            <a href="/2025/03/09/image/">image</a>
           </li>
         
           <li>
@@ -369,7 +360,7 @@
           </li>
         
           <li>
-            <a href="/2025/01/20/Hello/">Hello!!!</a>
+            <a href="/2025/01/20/hello-world/">Hello World</a>
           </li>
         
       </ul>

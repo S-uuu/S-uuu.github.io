@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>sql基础知识 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一、SQl是什么SQL（Structured Query Language，结构化查询语言）是一种用于管理关系数据库系统的声明性编程语言。它允许用户以一种简洁而强大的方式对数据库中的数据进行查询、插入、更新、删除和管理等操作。 SQL的主要功能 数据查询（SELECT） 用于从数据库中检索数据。例如，SELECT * FROM employees;这条语句会从employees表中检索所有数据。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sql基础知识">
+<meta property="og:url" content="http://example.com/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、SQl是什么SQL（Structured Query Language，结构化查询语言）是一种用于管理关系数据库系统的声明性编程语言。它允许用户以一种简洁而强大的方式对数据库中的数据进行查询、插入、更新、删除和管理等操作。 SQL的主要功能 数据查询（SELECT） 用于从数据库中检索数据。例如，SELECT * FROM employees;这条语句会从employees表中检索所有数据。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-19T08:40:49.000Z">
+<meta property="article:modified_time" content="2025-03-19T09:16:50.003Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-sql基础知识" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="article-date">
+  <time class="dt-published" datetime="2025-03-19T08:40:49.000Z" itemprop="datePublished">2025-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      sql基础知识
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="一、SQl是什么"><a href="#一、SQl是什么" class="headerlink" title="一、SQl是什么"></a>一、SQl是什么</h1><p><strong>SQL（Structured Query Language，结构化查询语言）</strong>是一种用于管理关系数据库系统的声明性编程语言。它允许用户以一种简洁而强大的方式对数据库中的数据进行查询、插入、更新、删除和管理等操作。</p>
+<h3 id="SQL的主要功能"><a href="#SQL的主要功能" class="headerlink" title="SQL的主要功能"></a>SQL的主要功能</h3><ol>
+<li><strong>数据查询（SELECT）</strong><ul>
+<li>用于从数据库中检索数据。例如，<code>SELECT * FROM employees;</code>这条语句会从<code>employees</code>表中检索所有数据。</li>
+</ul>
+</li>
+<li><strong>数据更新（UPDATE）</strong><ul>
+<li>用于修改数据库中的数据。例如，<code>UPDATE employees SET salary = salary + 100 WHERE department = &#39;Sales&#39;;</code>这条语句会将<code>employees</code>表中<code>department</code>为<code>Sales</code>的员工的<code>salary</code>字段增加100。</li>
+</ul>
+</li>
+<li><strong>数据插入（INSERT）</strong><ul>
+<li>用于向数据库中添加新数据。例如，<code>INSERT INTO employees (name, department, salary) VALUES (&#39;John Doe&#39;, &#39;HR&#39;, 5000);</code>这条语句会向<code>employees</code>表中插入一条新记录。</li>
+</ul>
+</li>
+<li><strong>数据删除（DELETE）</strong><ul>
+<li>用于从数据库中删除数据。例如，<code>DELETE FROM employees WHERE name = &#39;John Doe&#39;;</code>这条语句会删除<code>employees</code>表中<code>name</code>为<code>John Doe</code>的记录。</li>
+</ul>
+</li>
+<li><strong>数据库定义（DDL）</strong><ul>
+<li>包括创建、修改和删除数据库中的表、索引等结构。例如，<code>CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(50), department VARCHAR(50), salary INT);</code>这条语句会创建一个名为<code>employees</code>的表。</li>
+</ul>
+</li>
+<li><strong>数据库控制（DCL）</strong><ul>
+<li>包括授予或撤销用户对数据库的访问权限。例如，<code>GRANT SELECT ON employees TO user1;</code>这条语句会授予用户<code>user1</code>对<code>employees</code>表的查询权限。</li>
+</ul>
+</li>
+</ol>
+<h3 id="SQL的分类"><a href="#SQL的分类" class="headerlink" title="SQL的分类"></a>SQL的分类</h3><ol>
+<li><strong>DDL（Data Definition Language，数据定义语言）</strong><ul>
+<li>用于定义和修改数据库结构，如创建表、修改表结构、删除表等。常见的语句有<code>CREATE TABLE</code>、<code>ALTER TABLE</code>、<code>DROP TABLE</code>等。</li>
+</ul>
+</li>
+<li><strong>DML（Data Manipulation Language，数据操纵语言）</strong><ul>
+<li>用于操作数据库中的数据，如查询、插入、更新和删除数据。常见的语句有<code>SELECT</code>、<code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code>等。</li>
+</ul>
+</li>
+<li><strong>DCL（Data Control Language，数据控制语言）</strong><ul>
+<li>用于控制用户对数据库的访问权限，如授予、撤销权限等。常见的语句有<code>GRANT</code>、<code>REVOKE</code>等。</li>
+</ul>
+</li>
+<li><strong>TCL（Transaction Control Language，事务控制语言）</strong><ul>
+<li>用于管理数据库事务，如提交事务、回滚事务等。常见的语句有<code>COMMIT</code>、<code>ROLLBACK</code>等。</li>
+</ul>
+</li>
+</ol>
+<h3 id="SQL的应用场景"><a href="#SQL的应用场景" class="headerlink" title="SQL的应用场景"></a>SQL的应用场景</h3><ol>
+<li><strong>企业级应用</strong><ul>
+<li>在企业中，SQL被广泛用于管理客户关系管理系统（CRM）、企业资源规划系统（ERP）等。例如，企业可以通过SQL查询客户的购买记录、更新库存信息等。</li>
+</ul>
+</li>
+<li><strong>数据分析</strong><ul>
+<li>数据分析师使用SQL从大型数据库中提取数据，进行数据分析和报告生成。例如，通过SQL查询销售数据，分析不同产品的销售趋势。</li>
+</ul>
+</li>
+<li><strong>网站开发</strong><ul>
+<li>在网站开发中，SQL用于管理用户信息、文章内容等。例如，通过SQL查询用户登录信息，向用户展示个性化的内容。</li>
+</ul>
+</li>
+</ol>
+<h3 id="SQL的流行数据库管理系统"><a href="#SQL的流行数据库管理系统" class="headerlink" title="SQL的流行数据库管理系统"></a>SQL的流行数据库管理系统</h3><ol>
+<li><strong>MySQL</strong><ul>
+<li>一种开源的关系数据库管理系统，广泛用于网站开发和企业级应用。它以高性能、高可靠性和易于使用而著称。</li>
+</ul>
+</li>
+<li><strong>PostgreSQL</strong><ul>
+<li>一种开源的关系数据库管理系统，以其强大的功能和高度的可扩展性而闻名。它支持复杂的查询和高级的数据类型。</li>
+</ul>
+</li>
+<li><strong>Oracle</strong><ul>
+<li>一种商业的关系数据库管理系统，广泛用于大型企业。它提供了强大的性能和高级的数据库功能，但需要付费使用。</li>
+</ul>
+</li>
+<li><strong>SQLite</strong><ul>
+<li>一种轻量级的嵌入式数据库，通常用于移动应用和小型项目。它不需要单独的服务器进程，可以直接嵌入到应用程序中。</li>
+</ul>
+</li>
+</ol>
+<h3 id="SQL的优缺点"><a href="#SQL的优缺点" class="headerlink" title="SQL的优缺点"></a>SQL的优缺点</h3><ul>
+<li><strong>优点</strong><ul>
+<li><strong>功能强大</strong>：SQL提供了丰富的功能，可以轻松地对数据进行查询、插入、更新和删除等操作。</li>
+<li><strong>易于学习</strong>：SQL语法简洁明了，容易上手，即使是初学者也能快速掌握基本操作。</li>
+<li><strong>广泛支持</strong>：几乎所有关系数据库管理系统都支持SQL，这意味着学习SQL后可以在多种数据库中使用。</li>
+</ul>
+</li>
+<li><strong>缺点</strong><ul>
+<li><strong>性能问题</strong>：对于非常复杂或大规模的数据操作，SQL可能会面临性能瓶颈，需要进行优化。</li>
+<li><strong>灵活性有限</strong>：SQL是一种声明性语言，对于一些复杂的逻辑处理可能不够灵活。</li>
+</ul>
+</li>
+</ul>
+<p>总之，SQL是一种非常重要的数据库语言，它在数据管理和分析领域发挥着关键作用。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" data-id="cm8fpnhkb0006m0v3370t0hsv" data-title="sql基础知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Mysql命令</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">sql基础知识</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/">Mysql命令</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/">Windows靶场搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">小皮面板网站搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/13/IIS%E7%BB%91%E5%AE%9A/">IIS绑定</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

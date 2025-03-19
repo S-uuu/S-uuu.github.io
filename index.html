@@ -69,6 +69,231 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-sql基础知识" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="article-date">
+  <time class="dt-published" datetime="2025-03-19T08:40:49.000Z" itemprop="datePublished">2025-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">sql基础知识</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="一、SQl是什么"><a href="#一、SQl是什么" class="headerlink" title="一、SQl是什么"></a>一、SQl是什么</h1><p><strong>SQL（Structured Query Language，结构化查询语言）</strong>是一种用于管理关系数据库系统的声明性编程语言。它允许用户以一种简洁而强大的方式对数据库中的数据进行查询、插入、更新、删除和管理等操作。</p>
+<h3 id="SQL的主要功能"><a href="#SQL的主要功能" class="headerlink" title="SQL的主要功能"></a>SQL的主要功能</h3><ol>
+<li><strong>数据查询（SELECT）</strong><ul>
+<li>用于从数据库中检索数据。例如，<code>SELECT * FROM employees;</code>这条语句会从<code>employees</code>表中检索所有数据。</li>
+</ul>
+</li>
+<li><strong>数据更新（UPDATE）</strong><ul>
+<li>用于修改数据库中的数据。例如，<code>UPDATE employees SET salary = salary + 100 WHERE department = &#39;Sales&#39;;</code>这条语句会将<code>employees</code>表中<code>department</code>为<code>Sales</code>的员工的<code>salary</code>字段增加100。</li>
+</ul>
+</li>
+<li><strong>数据插入（INSERT）</strong><ul>
+<li>用于向数据库中添加新数据。例如，<code>INSERT INTO employees (name, department, salary) VALUES (&#39;John Doe&#39;, &#39;HR&#39;, 5000);</code>这条语句会向<code>employees</code>表中插入一条新记录。</li>
+</ul>
+</li>
+<li><strong>数据删除（DELETE）</strong><ul>
+<li>用于从数据库中删除数据。例如，<code>DELETE FROM employees WHERE name = &#39;John Doe&#39;;</code>这条语句会删除<code>employees</code>表中<code>name</code>为<code>John Doe</code>的记录。</li>
+</ul>
+</li>
+<li><strong>数据库定义（DDL）</strong><ul>
+<li>包括创建、修改和删除数据库中的表、索引等结构。例如，<code>CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(50), department VARCHAR(50), salary INT);</code>这条语句会创建一个名为<code>employees</code>的表。</li>
+</ul>
+</li>
+<li><strong>数据库控制（DCL）</strong><ul>
+<li>包括授予或撤销用户对数据库的访问权限。例如，<code>GRANT SELECT ON employees TO user1;</code>这条语句会授予用户<code>user1</code>对<code>employees</code>表的查询权限。</li>
+</ul>
+</li>
+</ol>
+<h3 id="SQL的分类"><a href="#SQL的分类" class="headerlink" title="SQL的分类"></a>SQL的分类</h3><ol>
+<li><strong>DDL（Data Definition Language，数据定义语言）</strong><ul>
+<li>用于定义和修改数据库结构，如创建表、修改表结构、删除表等。常见的语句有<code>CREATE TABLE</code>、<code>ALTER TABLE</code>、<code>DROP TABLE</code>等。</li>
+</ul>
+</li>
+<li><strong>DML（Data Manipulation Language，数据操纵语言）</strong><ul>
+<li>用于操作数据库中的数据，如查询、插入、更新和删除数据。常见的语句有<code>SELECT</code>、<code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code>等。</li>
+</ul>
+</li>
+<li><strong>DCL（Data Control Language，数据控制语言）</strong><ul>
+<li>用于控制用户对数据库的访问权限，如授予、撤销权限等。常见的语句有<code>GRANT</code>、<code>REVOKE</code>等。</li>
+</ul>
+</li>
+<li><strong>TCL（Transaction Control Language，事务控制语言）</strong><ul>
+<li>用于管理数据库事务，如提交事务、回滚事务等。常见的语句有<code>COMMIT</code>、<code>ROLLBACK</code>等。</li>
+</ul>
+</li>
+</ol>
+<h3 id="SQL的应用场景"><a href="#SQL的应用场景" class="headerlink" title="SQL的应用场景"></a>SQL的应用场景</h3><ol>
+<li><strong>企业级应用</strong><ul>
+<li>在企业中，SQL被广泛用于管理客户关系管理系统（CRM）、企业资源规划系统（ERP）等。例如，企业可以通过SQL查询客户的购买记录、更新库存信息等。</li>
+</ul>
+</li>
+<li><strong>数据分析</strong><ul>
+<li>数据分析师使用SQL从大型数据库中提取数据，进行数据分析和报告生成。例如，通过SQL查询销售数据，分析不同产品的销售趋势。</li>
+</ul>
+</li>
+<li><strong>网站开发</strong><ul>
+<li>在网站开发中，SQL用于管理用户信息、文章内容等。例如，通过SQL查询用户登录信息，向用户展示个性化的内容。</li>
+</ul>
+</li>
+</ol>
+<h3 id="SQL的流行数据库管理系统"><a href="#SQL的流行数据库管理系统" class="headerlink" title="SQL的流行数据库管理系统"></a>SQL的流行数据库管理系统</h3><ol>
+<li><strong>MySQL</strong><ul>
+<li>一种开源的关系数据库管理系统，广泛用于网站开发和企业级应用。它以高性能、高可靠性和易于使用而著称。</li>
+</ul>
+</li>
+<li><strong>PostgreSQL</strong><ul>
+<li>一种开源的关系数据库管理系统，以其强大的功能和高度的可扩展性而闻名。它支持复杂的查询和高级的数据类型。</li>
+</ul>
+</li>
+<li><strong>Oracle</strong><ul>
+<li>一种商业的关系数据库管理系统，广泛用于大型企业。它提供了强大的性能和高级的数据库功能，但需要付费使用。</li>
+</ul>
+</li>
+<li><strong>SQLite</strong><ul>
+<li>一种轻量级的嵌入式数据库，通常用于移动应用和小型项目。它不需要单独的服务器进程，可以直接嵌入到应用程序中。</li>
+</ul>
+</li>
+</ol>
+<h3 id="SQL的优缺点"><a href="#SQL的优缺点" class="headerlink" title="SQL的优缺点"></a>SQL的优缺点</h3><ul>
+<li><strong>优点</strong><ul>
+<li><strong>功能强大</strong>：SQL提供了丰富的功能，可以轻松地对数据进行查询、插入、更新和删除等操作。</li>
+<li><strong>易于学习</strong>：SQL语法简洁明了，容易上手，即使是初学者也能快速掌握基本操作。</li>
+<li><strong>广泛支持</strong>：几乎所有关系数据库管理系统都支持SQL，这意味着学习SQL后可以在多种数据库中使用。</li>
+</ul>
+</li>
+<li><strong>缺点</strong><ul>
+<li><strong>性能问题</strong>：对于非常复杂或大规模的数据操作，SQL可能会面临性能瓶颈，需要进行优化。</li>
+<li><strong>灵活性有限</strong>：SQL是一种声明性语言，对于一些复杂的逻辑处理可能不够灵活。</li>
+</ul>
+</li>
+</ul>
+<p>总之，SQL是一种非常重要的数据库语言，它在数据管理和分析领域发挥着关键作用。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" data-id="cm8fpnhkb0006m0v3370t0hsv" data-title="sql基础知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Mysql命令" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time class="dt-published" datetime="2025-03-19T08:03:02.000Z" itemprop="datePublished">2025-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/">Mysql命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/" data-id="cm8fpnhk20000m0v3c3xi6101" data-title="Mysql命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Windows靶场搭建" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/" class="article-date">
+  <time class="dt-published" datetime="2025-03-19T07:56:42.000Z" itemprop="datePublished">2025-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/">Windows靶场搭建</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="一、环境配置"><a href="#一、环境配置" class="headerlink" title="一、环境配置"></a>一、环境配置</h1><h2 id="1-小皮面板"><a href="#1-小皮面板" class="headerlink" title="1.小皮面板"></a>1.小皮面板</h2><p>一款集成的 PHP 开发环境，主要用于搭建本地的 PHP 开发和测试环境。它集成了多种常用的服务器和工具，方便开发者快速搭建和运行 PHP 项目，而无需手动配置复杂的环境。</p>
+<h2 id="2-sql-libs环境"><a href="#2-sql-libs环境" class="headerlink" title="2.sql-libs环境"></a>2.sql-libs环境</h2><p>一个用于学习和练习 <strong>SQL 注入</strong> 的开源平台。它提供了一系列的注入场景和关卡，帮助开发者和安全测试人员深入理解 SQL 注入的原理和防范方法。</p>
+<h3 id="将sql-libs文件夹存放到PHP-study根目录下（网站→管理→打开根目录）"><a href="#将sql-libs文件夹存放到PHP-study根目录下（网站→管理→打开根目录）" class="headerlink" title="将sql-libs文件夹存放到PHP study根目录下（网站→管理→打开根目录）"></a>将sql-libs文件夹存放到PHP study根目录下（网站→管理→打开根目录）</h3><p><img src="/imgs/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-1742375781666-5.png"></p>
+<h2 id="3-启动Apache、Mysql，web打开本地回环地址127-0-0-1"><a href="#3-启动Apache、Mysql，web打开本地回环地址127-0-0-1" class="headerlink" title="3.启动Apache、Mysql，web打开本地回环地址127.0.0.1"></a>3.启动Apache、Mysql，web打开本地回环地址127.0.0.1</h2><p>（127.0.0.1 是一个特殊的 IPv4 地址，称为本地回环地址（Loopback Address）或本地主机地址（localhost）。它主要用于让计算机与自身进行通信。）</p>
+<p>以下是 127.0.0.1 的主要特点和用途：</p>
+<ol>
+<li><p><strong>本地通信</strong>：127.0.0.1 用于计算机内部的网络通信，数据包不会离开本机，而是直接在本机的网络协议栈中进行处理。</p>
+</li>
+<li><p><strong>测试和调试</strong>：开发人员和系统管理员常用它来测试网络应用程序，例如访问本地运行的 Web 服务器。</p>
+</li>
+<li><p><strong>安全性</strong>：由于数据不会离开本机，使用 127.0.0.1 可以提高本地服务的安全性。</p>
+</li>
+<li><p><strong>网络接口测试</strong>：可以用来测试计算机的网络接口是否正常工作。</p>
+</li>
+</ol>
+<h3 id="访问失败？"><a href="#访问失败？" class="headerlink" title="访问失败？"></a>访问失败？</h3><p><img src="D:\Myblog\Myblog\source\imgs\Windows靶场搭建\小皮面板（错误.png"></p>
+<h3 id="错误原因：网站索引不对"><a href="#错误原因：网站索引不对" class="headerlink" title="错误原因：网站索引不对"></a>错误原因：网站索引不对</h3><h3 id="正确示例："><a href="#正确示例：" class="headerlink" title="正确示例："></a>正确示例：</h3><p><img src="D:\Myblog\Myblog\source\imgs\Windows靶场搭建\小皮面板（文件夹索引.png"></p>
+<p><img src="D:\Myblog\Myblog\source\imgs\Windows靶场搭建\小皮面板（正确.png"></p>
+<h2 id="4-连接数据库"><a href="#4-连接数据库" class="headerlink" title="4.连接数据库"></a>4.连接数据库</h2><p>（sql-lib-master→sql-connections→db文件→修改用户名和密码）</p>
+<p><img src="/imgs/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/" data-id="cm8fpnhk90003m0v39ct942eb" data-title="Windows靶场搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-小皮面板网站搭建" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" class="article-date">
@@ -110,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" data-id="cm8bngvgo0003xov31vz27e3k" data-title="小皮面板网站搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" data-id="cm8fpnhkc0007m0v3e9iv1nww" data-title="小皮面板网站搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -180,7 +405,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/13/IIS%E7%BB%91%E5%AE%9A/" data-id="cm8bngvgm0001xov35ybqaf95" data-title="IIS绑定" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/13/IIS%E7%BB%91%E5%AE%9A/" data-id="cm8fpnhk70001m0v37png6ots" data-title="IIS绑定" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -219,7 +444,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/09/image/" data-id="cm8bngvgi0000xov39cs326rf" data-title="image" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/09/image/" data-id="cm8fpnhkb0005m0v3hl6vf636" data-title="image" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -261,7 +486,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/analysis/" data-id="cm8bngvgn0002xov30dll23qy" data-title="analysis" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/analysis/" data-id="cm8fpnhk80002m0v3di5o2ubs" data-title="analysis" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -303,7 +528,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/" data-id="cm8bngvgq0005xov3eb9qe3io" data-title="图片上传指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/" data-id="cm8fpnhkc0008m0v3f6lf6jnz" data-title="图片上传指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -354,7 +579,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/01/20/hello-world/" data-id="cm8bngvgp0004xov3fy6ybe44" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/01/20/hello-world/" data-id="cm8fpnhka0004m0v33qnmbaze" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -397,23 +622,23 @@
       <ul>
         
           <li>
+            <a href="/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">sql基础知识</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/">Mysql命令</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/">Windows靶场搭建</a>
+          </li>
+        
+          <li>
             <a href="/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">小皮面板网站搭建</a>
           </li>
         
           <li>
             <a href="/2025/03/13/IIS%E7%BB%91%E5%AE%9A/">IIS绑定</a>
-          </li>
-        
-          <li>
-            <a href="/2025/03/09/image/">image</a>
-          </li>
-        
-          <li>
-            <a href="/2025/03/01/analysis/">analysis</a>
-          </li>
-        
-          <li>
-            <a href="/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/">图片上传指南</a>
           </li>
         
       </ul>

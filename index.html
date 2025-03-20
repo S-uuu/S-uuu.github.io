@@ -186,7 +186,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" data-id="cm8fpnhkb0006m0v3370t0hsv" data-title="sql基础知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" data-id="cm8hd073h0006bov3ad5m0sew" data-title="sql基础知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -220,11 +220,48 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <h1 id="1-查看数据库"><a href="#1-查看数据库" class="headerlink" title="1.查看数据库"></a>1.查看数据库</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-创建数据库employees并选择字符集"><a href="#2-创建数据库employees并选择字符集" class="headerlink" title="2.创建数据库employees并选择字符集"></a>2.创建数据库employees并选择字符集</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database employees charset utf8;</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-删除数据库employees"><a href="#3-删除数据库employees" class="headerlink" title="3.删除数据库employees"></a>3.删除数据库employees</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database employees;</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-选择进入数据库employees"><a href="#4-选择进入数据库employees" class="headerlink" title="4.选择进入数据库employees"></a>4.选择进入数据库employees</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use employees;</span><br></pre></td></tr></table></figure>
+<h1 id="5-创建数据表"><a href="#5-创建数据表" class="headerlink" title="5.创建数据表"></a>5.创建数据表</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table employee;</span><br></pre></td></tr></table></figure>
+
+<h1 id="6-写入表格信息及相关参数"><a href="#6-写入表格信息及相关参数" class="headerlink" title="6.写入表格信息及相关参数"></a>6.写入表格信息及相关参数</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create table employee</span><br><span class="line">(</span><br><span class="line">id int,</span><br><span class="line">name varchar(40),</span><br><span class="line">sex char(4),</span><br><span class="line">birthday date,</span><br><span class="line">job varchar(100)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h1 id="7-查看数据表信息"><a href="#7-查看数据表信息" class="headerlink" title="7.查看数据表信息"></a>7.查看数据表信息</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show full columns from employees;</span><br></pre></td></tr></table></figure>
+
+<h1 id="8-查看数据表列表"><a href="#8-查看数据表列表" class="headerlink" title="8.查看数据表列表"></a>8.查看数据表列表</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from employee;</span><br></pre></td></tr></table></figure>
+
+<h1 id="9-删除数据表"><a href="#9-删除数据表" class="headerlink" title="9.删除数据表"></a>9.删除数据表</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table employee;</span><br></pre></td></tr></table></figure>
+
+<h1 id="10-修改数据表名称为user"><a href="#10-修改数据表名称为user" class="headerlink" title="10.修改数据表名称为user"></a>10.修改数据表名称为user</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rename table employee to user;</span><br></pre></td></tr></table></figure>
+
+<h1 id="11-修改字符级"><a href="#11-修改字符级" class="headerlink" title="11.修改字符级"></a>11.修改字符级</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert table user character set utf8;</span><br></pre></td></tr></table></figure>
+
+<h1 id="12-写入内容"><a href="#12-写入内容" class="headerlink" title="12.写入内容"></a>12.写入内容</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">insert into user</span><br><span class="line">(id,name,sex,birthday,job)</span><br><span class="line">values</span><br><span class="line">(1,&#x27;ctfstu&#x27;,&#x27;male&#x27;,&#x27;2000-01-01&#x27;,&#x27;it&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h1 id="13-为user增加一列内容salary"><a href="#13-为user增加一列内容salary" class="headerlink" title="13.为user增加一列内容salary"></a>13.为user增加一列内容salary</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert table user add salary decimal(8,2);</span><br></pre></td></tr></table></figure>
+
+<h1 id="14-修改所有工资为5000"><a href="#14-修改所有工资为5000" class="headerlink" title="14.修改所有工资为5000"></a>14.修改所有工资为5000</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update user set salary=5000;</span><br></pre></td></tr></table></figure>
+
+<h1 id="15-修改id-1的行name为great"><a href="#15-修改id-1的行name为great" class="headerlink" title="15.修改id&#x3D;1的行name为great"></a>15.修改id&#x3D;1的行name为great</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update user set name=&#x27;great&#x27;where id=1</span><br></pre></td></tr></table></figure>
+
+<h1 id="16-修改id-1的行name为good，工资为3000"><a href="#16-修改id-1的行name为good，工资为3000" class="headerlink" title="16.修改id&#x3D;1的行name为good，工资为3000"></a>16.修改id&#x3D;1的行name为good，工资为3000</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update user set name=&#x27;good&#x27;,salary=3000 where id=1;</span><br></pre></td></tr></table></figure>
+
+<h1 id="17-删除列"><a href="#17-删除列" class="headerlink" title="17.删除列"></a>17.删除列</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table user drop salary;</span><br></pre></td></tr></table></figure>
+
+<h1 id="18-删除行"><a href="#18-删除行" class="headerlink" title="18.删除行"></a>18.删除行</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from user where job=&#x27;it&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="19-删除表"><a href="#19-删除表" class="headerlink" title="19.删除表"></a>19.删除表</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from user;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/" data-id="cm8fpnhk20000m0v3c3xi6101" data-title="Mysql命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/" data-id="cm8hd07310000bov3azni98q0" data-title="Mysql命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -282,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/" data-id="cm8fpnhk90003m0v39ct942eb" data-title="Windows靶场搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/" data-id="cm8hd07360001bov3eov72n7m" data-title="Windows靶场搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -335,7 +372,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" data-id="cm8fpnhkc0007m0v3e9iv1nww" data-title="小皮面板网站搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" data-id="cm8hd073i0008bov3bzoy5110" data-title="小皮面板网站搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -405,7 +442,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/13/IIS%E7%BB%91%E5%AE%9A/" data-id="cm8fpnhk70001m0v37png6ots" data-title="IIS绑定" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/13/IIS%E7%BB%91%E5%AE%9A/" data-id="cm8hd073f0004bov36dgm5ykm" data-title="IIS绑定" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -444,7 +481,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/09/image/" data-id="cm8fpnhkb0005m0v3hl6vf636" data-title="image" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/09/image/" data-id="cm8hd073g0005bov3gglw62kw" data-title="image" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -486,7 +523,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/analysis/" data-id="cm8fpnhk80002m0v3di5o2ubs" data-title="analysis" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/analysis/" data-id="cm8hd07370002bov34dvk39f6" data-title="analysis" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -528,7 +565,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/" data-id="cm8fpnhkc0008m0v3f6lf6jnz" data-title="图片上传指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/" data-id="cm8hd073h0007bov35mqgd4xm" data-title="图片上传指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -579,7 +616,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/01/20/hello-world/" data-id="cm8fpnhka0004m0v33qnmbaze" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/01/20/hello-world/" data-id="cm8hd07380003bov36skm728h" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       

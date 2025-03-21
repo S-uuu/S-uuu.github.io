@@ -69,6 +69,63 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-数据库查询" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/03/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/" class="article-date">
+  <time class="dt-published" datetime="2025-03-21T07:53:16.000Z" itemprop="datePublished">2025-03-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/03/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/">数据库查询</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="基础查询词语"><a href="#基础查询词语" class="headerlink" title="基础查询词语"></a>基础查询词语</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select ; from ; where</span><br></pre></td></tr></table></figure>
+
+<h1 id="基本查询语句"><a href="#基本查询语句" class="headerlink" title="基本查询语句"></a>基本查询语句</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select * from users where id=1;</span><br><span class="line">#select+列名（*代表所有）from+表名 where（表示条件）id=  </span><br><span class="line">或者</span><br><span class="line">select * from users where id in (1);</span><br><span class="line">_________________________</span><br><span class="line"></span><br><span class="line">select * from users where id=(select id from users where username=&#x27;admin&#x27;);</span><br><span class="line">#子查询，优先执行括号内查询语句</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="查询参数语句"><a href="#查询参数语句" class="headerlink" title="查询参数语句"></a>查询参数语句</h1><h2 id="union（联合查询）"><a href="#union（联合查询）" class="headerlink" title="union（联合查询）"></a>union（联合查询）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select id from users union select email_id from emails;</span><br><span class="line">#查询同时进行并合并数据显示。</span><br></pre></td></tr></table></figure>
+
+<h3 id="限制：在数据库中使用-UNION-合并多个查询结果时，若前后查询的列数不一致，会导致错误。"><a href="#限制：在数据库中使用-UNION-合并多个查询结果时，若前后查询的列数不一致，会导致错误。" class="headerlink" title="限制：在数据库中使用 UNION 合并多个查询结果时，若前后查询的列数不一致，会导致错误。"></a>限制：在数据库中使用 UNION 合并多个查询结果时，若前后查询的列数不一致，会导致错误。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from users where id=1 union select * from emails where id=1;</span><br></pre></td></tr></table></figure>
+
+<p>users为三列，emails为两列，不对等</p>
+<p><img src="/imgs/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/users.png"></p>
+<p><img src="/imgs/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/emails.png"></p>
+<p><img src="/imgs/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/%E9%94%99%E4%BE%8B.png"></p>
+<h3 id="解决措施："><a href="#解决措施：" class="headerlink" title="解决措施："></a>解决措施：</h3><p>先检查是否有必要进行这样的操作，或者是否应该重新设计查询结构，比如使用子查询或连接来避免直接使用UNION。</p>
+<h4 id="前少后多：填充列"><a href="#前少后多：填充列" class="headerlink" title="前少后多：填充列"></a>前少后多：填充列</h4><p>统一列数<br>在列数较少的查询中，通过添加 NULL 或默认值字段，使所有查询的列数一致。确保数据类型兼容（如 NULL 可适配任意类型）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from users where id=1 union select *,3 from emails where id=1;</span><br><span class="line">#3为填充列</span><br></pre></td></tr></table></figure>
+
+<p><img src="/imgs/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/%E8%A7%A3%E5%86%B3%E6%8E%AA%E6%96%BD.png"></p>
+<p><img src="/imgs/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/null.png"></p>
+<h4 id="前多后少：指定列显示"><a href="#前多后少：指定列显示" class="headerlink" title="前多后少：指定列显示"></a>前多后少：指定列显示</h4><p><img src="/imgs/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/%E8%A7%A3%E5%86%B3%E6%8E%AA%E6%96%BD2.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/03/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/" data-id="cm8ik6ww90009psv3cyi275on" data-title="数据库查询" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-sql基础知识" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="article-date">
@@ -186,7 +243,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" data-id="cm8hd073h0006bov3ad5m0sew" data-title="sql基础知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" data-id="cm8ik6ww80007psv34al00hn5" data-title="sql基础知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -261,7 +318,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/" data-id="cm8hd07310000bov3azni98q0" data-title="Mysql命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/" data-id="cm8ik6ww50003psv3cl1g87iy" data-title="Mysql命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -319,7 +376,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/" data-id="cm8hd07360001bov3eov72n7m" data-title="Windows靶场搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/" data-id="cm8ik6ww30001psv3d3p06e2a" data-title="Windows靶场搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -372,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" data-id="cm8hd073i0008bov3bzoy5110" data-title="小皮面板网站搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" data-id="cm8ik6ww80008psv39oy9et5g" data-title="小皮面板网站搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -442,7 +499,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/13/IIS%E7%BB%91%E5%AE%9A/" data-id="cm8hd073f0004bov36dgm5ykm" data-title="IIS绑定" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/13/IIS%E7%BB%91%E5%AE%9A/" data-id="cm8ik6wvy0000psv39ghxd3ck" data-title="IIS绑定" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -481,7 +538,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/09/image/" data-id="cm8hd073g0005bov3gglw62kw" data-title="image" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/09/image/" data-id="cm8ik6ww60004psv39fa7cu07" data-title="image" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -523,7 +580,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/analysis/" data-id="cm8hd07370002bov34dvk39f6" data-title="analysis" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/analysis/" data-id="cm8ik6ww50002psv3hyqt82wi" data-title="analysis" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -565,7 +622,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/" data-id="cm8hd073h0007bov35mqgd4xm" data-title="图片上传指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/" data-id="cm8ik6ww70006psv3dyyi4hvo" data-title="图片上传指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -616,7 +673,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/01/20/hello-world/" data-id="cm8hd07380003bov36skm728h" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/01/20/hello-world/" data-id="cm8ik6ww70005psv3a19zgmns" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -659,6 +716,10 @@
       <ul>
         
           <li>
+            <a href="/2025/03/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/">数据库查询</a>
+          </li>
+        
+          <li>
             <a href="/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">sql基础知识</a>
           </li>
         
@@ -672,10 +733,6 @@
         
           <li>
             <a href="/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">小皮面板网站搭建</a>
-          </li>
-        
-          <li>
-            <a href="/2025/03/13/IIS%E7%BB%91%E5%AE%9A/">IIS绑定</a>
           </li>
         
       </ul>

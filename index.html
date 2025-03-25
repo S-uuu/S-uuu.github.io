@@ -127,11 +127,20 @@
 <h2 id="or"><a href="#or" class="headerlink" title="or"></a>or</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from users where id=1 or username=&#x27;Angelina&#x27;;</span><br><span class="line">#可执行出两结果</span><br></pre></td></tr></table></figure>
 
 <p><img src="/imgs/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/or.png"></p>
+<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><h2 id="group-concat-合并到一行显示"><a href="#group-concat-合并到一行显示" class="headerlink" title="group_concat(合并到一行显示)"></a>group_concat(合并到一行显示)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select group_concat(username) from users;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/imgs/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/group_concat.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select group_concat(username,id,...)</span><br></pre></td></tr></table></figure>
+
+<h2 id="select-database-查询数据库名字"><a href="#select-database-查询数据库名字" class="headerlink" title="select database(查询数据库名字)"></a>select database(查询数据库名字)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select database();</span><br></pre></td></tr></table></figure>
+
+<h2 id="select-version-查询版本"><a href="#select-version-查询版本" class="headerlink" title="select version(查询版本)"></a>select version(查询版本)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select version();</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/" data-id="cm8nwbhh90009hov3e319dd42" data-title="数据库查询" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/" data-id="cm8ohbh1a0008lsv38q3p1wt4" data-title="数据库查询" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -260,7 +269,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" data-id="cm8nwbhh70005hov311pxd4ed" data-title="sql基础知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" data-id="cm8ohbh1b0009lsv3ajxhcw4d" data-title="sql基础知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -335,7 +344,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/" data-id="cm8nwbhgz0000hov376hw2g9d" data-title="Mysql命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/" data-id="cm8ohbh160002lsv3ft3cfcsr" data-title="Mysql命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -393,7 +402,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/" data-id="cm8nwbhh60004hov30c5x9ssi" data-title="Windows靶场搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/" data-id="cm8ohbh140001lsv3f3ghdxyh" data-title="Windows靶场搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -446,7 +455,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" data-id="cm8nwbhh90008hov3ebgaai4t" data-title="小皮面板网站搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" data-id="cm8ohbh190006lsv378wc34an" data-title="小皮面板网站搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -516,7 +525,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/13/IIS%E7%BB%91%E5%AE%9A/" data-id="cm8nwbhh50002hov35tuz66qh" data-title="IIS绑定" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/13/IIS%E7%BB%91%E5%AE%9A/" data-id="cm8ohbh100000lsv34jyx7lg8" data-title="IIS绑定" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -555,7 +564,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/09/image/" data-id="cm8nwbhh80006hov3h92691rh" data-title="image" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/09/image/" data-id="cm8ohbh190005lsv35upocxrh" data-title="image" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -597,7 +606,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/analysis/" data-id="cm8nwbhh30001hov3fs8tbmdj" data-title="analysis" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/analysis/" data-id="cm8ohbh170003lsv3ckmh04ta" data-title="analysis" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -639,7 +648,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/" data-id="cm8nwbhh80007hov31iqe8ckl" data-title="图片上传指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/" data-id="cm8ohbh1a0007lsv37rldedkj" data-title="图片上传指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -690,7 +699,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/01/20/hello-world/" data-id="cm8nwbhh60003hov342m35az9" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/01/20/hello-world/" data-id="cm8ohbh180004lsv3hv6pg33g" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       

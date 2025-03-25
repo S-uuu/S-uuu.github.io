@@ -110,11 +110,28 @@
 <p><img src="/imgs/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/%E8%A7%A3%E5%86%B3%E6%8E%AA%E6%96%BD.png"></p>
 <p><img src="/imgs/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/null.png"></p>
 <h4 id="前多后少：指定列显示"><a href="#前多后少：指定列显示" class="headerlink" title="前多后少：指定列显示"></a>前多后少：指定列显示</h4><p><img src="/imgs/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/%E8%A7%A3%E5%86%B3%E6%8E%AA%E6%96%BD2.png"></p>
+<h2 id="group-by-分组-同类按组排序"><a href="#group-by-分组-同类按组排序" class="headerlink" title="group by(分组,同类按组排序)"></a>group by(分组,同类按组排序)</h2><h3 id="二分法判断数据表列数"><a href="#二分法判断数据表列数" class="headerlink" title="二分法判断数据表列数"></a>二分法判断数据表列数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select * from users where id =1 group by 1;</span><br><span class="line">select * from users where id =1 group by 2;</span><br><span class="line">select * from users where id =1 group by 3;</span><br><span class="line">......</span><br><span class="line">(以此类推，若第N+1列无法执行，则该数据表有N列)</span><br></pre></td></tr></table></figure>
+
+<h2 id="order-by-排序，默认按照升序排列"><a href="#order-by-排序，默认按照升序排列" class="headerlink" title="order by(排序，默认按照升序排列)"></a>order by(排序，默认按照升序排列)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from users order by 1;</span><br><span class="line">select * from users order by 2;</span><br></pre></td></tr></table></figure>
+
+<p>![](&#x2F;imgs&#x2F;数据库查询&#x2F;order by.png)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from users order by 3 desc;</span><br><span class="line">#desc 切换降序排列</span><br></pre></td></tr></table></figure>
+
+<p>![](&#x2F;imgs&#x2F;数据库查询&#x2F;order by 降序.png)</p>
+<h3 id="也可同group-by用来判断列数"><a href="#也可同group-by用来判断列数" class="headerlink" title="也可同group by用来判断列数"></a>也可同group by用来判断列数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from users where id =1 order by 1;</span><br><span class="line">select * from users where id =1 order by 2;</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+
+<h2 id="limit-限制输出内容数量"><a href="#limit-限制输出内容数量" class="headerlink" title="limit(限制输出内容数量)"></a>limit(限制输出内容数量)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from users limit 0,3;</span><br><span class="line">#显示第0——3行，注意从0开始计数</span><br></pre></td></tr></table></figure>
+
+<h2 id="and"><a href="#and" class="headerlink" title="and"></a>and</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from users where id=1 and username=&#x27;admin1&#x27;;</span><br><span class="line">#若无该username，则虽执行但不会显示</span><br></pre></td></tr></table></figure>
+
+<h2 id="or"><a href="#or" class="headerlink" title="or"></a>or</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from users where id=1 or username=&#x27;Angelina&#x27;;</span><br><span class="line">#可执行出两结果</span><br></pre></td></tr></table></figure>
+
+<p><img src="/imgs/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/or.png"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/" data-id="cm8jpgpzk0009sov3f12893ry" data-title="数据库查询" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/" data-id="cm8nwbhh90009hov3e319dd42" data-title="数据库查询" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -243,7 +260,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" data-id="cm8jpgpzj0007sov3g6lm2fb5" data-title="sql基础知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/19/sql%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" data-id="cm8nwbhh70005hov311pxd4ed" data-title="sql基础知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -318,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/" data-id="cm8jpgpza0000sov3g17hgfvx" data-title="Mysql命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/19/Mysql%E5%91%BD%E4%BB%A4/" data-id="cm8nwbhgz0000hov376hw2g9d" data-title="Mysql命令" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -376,7 +393,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/" data-id="cm8jpgpzh0003sov3dvauek96" data-title="Windows靶场搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/19/Windows%E9%9D%B6%E5%9C%BA%E6%90%AD%E5%BB%BA/" data-id="cm8nwbhh60004hov30c5x9ssi" data-title="Windows靶场搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -429,7 +446,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" data-id="cm8jpgpzk0008sov3goxv7ujn" data-title="小皮面板网站搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/16/%E5%B0%8F%E7%9A%AE%E9%9D%A2%E6%9D%BF%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" data-id="cm8nwbhh90008hov3ebgaai4t" data-title="小皮面板网站搭建" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -499,7 +516,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/13/IIS%E7%BB%91%E5%AE%9A/" data-id="cm8jpgpze0001sov34y1k0ljd" data-title="IIS绑定" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/13/IIS%E7%BB%91%E5%AE%9A/" data-id="cm8nwbhh50002hov35tuz66qh" data-title="IIS绑定" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -538,7 +555,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/09/image/" data-id="cm8jpgpzi0006sov33w3chefw" data-title="image" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/09/image/" data-id="cm8nwbhh80006hov3h92691rh" data-title="image" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -580,7 +597,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/analysis/" data-id="cm8jpgpzh0004sov3hxze3x87" data-title="analysis" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/analysis/" data-id="cm8nwbhh30001hov3fs8tbmdj" data-title="analysis" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -622,7 +639,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/" data-id="cm8jpgpzi0005sov34exicpy6" data-title="图片上传指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/03/01/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8C%87%E5%8D%97/" data-id="cm8nwbhh80007hov31iqe8ckl" data-title="图片上传指南" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -673,7 +690,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2025/01/20/hello-world/" data-id="cm8jpgpzg0002sov31d7a3k9q" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2025/01/20/hello-world/" data-id="cm8nwbhh60003hov342m35az9" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       

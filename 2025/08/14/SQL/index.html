@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>SQL | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1.SQL快速参考   SQL 语句 语法 说明    AND &#x2F; OR SELECT column_name(s) FROM table_name WHERE condition AND|OR condition AND:表示逻辑与 OR:表示逻辑或   ALTER TABLE ALTER TABLE table_name ADD column_name datatypeALTER T">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL">
+<meta property="og:url" content="http://example.com/2025/08/14/SQL/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.SQL快速参考   SQL 语句 语法 说明    AND &#x2F; OR SELECT column_name(s) FROM table_name WHERE condition AND|OR condition AND:表示逻辑与 OR:表示逻辑或   ALTER TABLE ALTER TABLE table_name ADD column_name datatypeALTER T">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-08-14T03:02:59.000Z">
+<meta property="article:modified_time" content="2025-08-14T03:08:39.743Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-SQL" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/08/14/SQL/" class="article-date">
+  <time class="dt-published" datetime="2025-08-14T03:02:59.000Z" itemprop="datePublished">2025-08-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      SQL
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-SQL快速参考"><a href="#1-SQL快速参考" class="headerlink" title="1.SQL快速参考"></a>1.SQL快速参考</h1><table>
+<thead>
+<tr>
+<th align="left">SQL 语句</th>
+<th align="left">语法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>AND &#x2F; OR</strong></td>
+<td align="left">SELECT column_name(s) FROM table_name WHERE condition AND|OR condition</td>
+<td align="left">AND:表示逻辑与 OR:表示逻辑或</td>
+</tr>
+<tr>
+<td align="left"><strong>ALTER TABLE</strong></td>
+<td align="left"><code>ALTER TABLE table_name ADD column_name datatypeALTER TABLE table_name DROP COLUMN column_name</code></td>
+<td align="left">用于修改现有表的结构，添加或删除列。</td>
+</tr>
+<tr>
+<td align="left"><strong>AS (alias)</strong></td>
+<td align="left"><code>SELECT column_name AS column_alias FROM table_nameSELECT column_name FROM table_name AS table_alias</code></td>
+<td align="left">用于为列或表指定别名。</td>
+</tr>
+<tr>
+<td align="left"><strong>BETWEEN</strong></td>
+<td align="left"><code>SELECT column_name(s) FROM table_name WHERE column_name BETWEEN value1 AND value2</code></td>
+<td align="left">用于筛选在指定范围内的记录。</td>
+</tr>
+<tr>
+<td align="left"><strong>CREATE DATABASE</strong></td>
+<td align="left"><code>CREATE DATABASE database_name</code></td>
+<td align="left">用于创建新数据库。</td>
+</tr>
+<tr>
+<td align="left"><strong>CREATE TABLE</strong></td>
+<td align="left"><code>CREATE TABLE table_name (column_name1 data_type, column_name2 data_type, ...)</code></td>
+<td align="left">用于创建新表，定义表的列和数据类型。</td>
+</tr>
+<tr>
+<td align="left"><strong>CREATE INDEX</strong></td>
+<td align="left"><code>CREATE INDEX index_name ON table_name (column_name)CREATE UNIQUE INDEX index_name ON table_name (column_name)</code></td>
+<td align="left">用于在表的列上创建索引，以加速查询。</td>
+</tr>
+<tr>
+<td align="left"><strong>CREATE VIEW</strong></td>
+<td align="left"><code>CREATE VIEW view_name AS SELECT column_name(s) FROM table_name WHERE condition</code></td>
+<td align="left">用于创建视图，以保存复杂查询的结果。</td>
+</tr>
+<tr>
+<td align="left"><strong>DELETE</strong></td>
+<td align="left"><code>DELETE FROM table_name WHERE some_column=some_valueDELETE FROM table_nameDELETE * FROM table_name</code></td>
+<td align="left">用于删除表中的记录， 和 会删除所有记录。<code>DELETE FROM table_name``DELETE * FROM table_name</code></td>
+</tr>
+<tr>
+<td align="left"><strong>DROP DATABASE</strong></td>
+<td align="left"><code>DROP DATABASE database_name</code></td>
+<td align="left">用于删除数据库。</td>
+</tr>
+<tr>
+<td align="left"><strong>DROP INDEX</strong></td>
+<td align="left"><code>DROP INDEX table_name.index_name (SQL Server)DROP INDEX index_name ON table_name (MS Access)DROP INDEX index_name (DB2/Oracle)ALTER TABLE table_name DROP INDEX index_name (MySQL)</code></td>
+<td align="left">用于删除表上的索引。</td>
+</tr>
+<tr>
+<td align="left"><strong>DROP TABLE</strong></td>
+<td align="left"><code>DROP TABLE table_name</code></td>
+<td align="left">用于删除表及其所有数据。</td>
+</tr>
+<tr>
+<td align="left"><strong>GROUP BY</strong></td>
+<td align="left"><code>SELECT column_name, aggregate_function(column_name) FROM table_name WHERE column_name operator value GROUP BY column_name</code></td>
+<td align="left">用于按一个或多个列对结果集进行分组。</td>
+</tr>
+<tr>
+<td align="left"><strong>HAVING</strong></td>
+<td align="left"><code>SELECT column_name, aggregate_function(column_name) FROM table_name WHERE column_name operator value GROUP BY column_name HAVING aggregate_function(column_name) operator value</code></td>
+<td align="left">用于对分组后的结果集进行过滤。</td>
+</tr>
+<tr>
+<td align="left"><strong>AND</strong></td>
+<td align="left"><code>SELECT column_name(s) FROM table_name WHERE column_name IN (value1, value2, ...)</code></td>
+<td align="left">用于筛选匹配集合中某一值的记录。</td>
+</tr>
+<tr>
+<td align="left"><strong>INSERT INTO</strong></td>
+<td align="left"><code>INSERT INTO table_name VALUES (value1, value2, ...)INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...)</code></td>
+<td align="left">用于向表中插入新记录。</td>
+</tr>
+<tr>
+<td align="left"><strong>INNER JOIN</strong></td>
+<td align="left"><code>SELECT column_name(s) FROM table_name1 INNER JOIN table_name2 ON table_name1.column_name=table_name2.column_name</code></td>
+<td align="left">用于返回两个表中匹配的记录。</td>
+</tr>
+<tr>
+<td align="left"><strong>LEFT JOIN</strong></td>
+<td align="left"><code>SELECT column_name(s) FROM table_name1 LEFT JOIN table_name2 ON table_name1.column_name=table_name2.column_name</code></td>
+<td align="left">用于返回左表中的所有记录和右表中的匹配记录。</td>
+</tr>
+<tr>
+<td align="left"><strong>RIGHT JOIN</strong></td>
+<td align="left"><code>SELECT column_name(s) FROM table_name1 RIGHT JOIN table_name2 ON table_name1.column_name=table_name2.column_name</code></td>
+<td align="left">用于返回右表中的所有记录和左表中的匹配记录。</td>
+</tr>
+<tr>
+<td align="left"><strong>FULL JOIN</strong></td>
+<td align="left"><code>SELECT column_name(s) FROM table_name1 FULL JOIN table_name2 ON table_name1.column_name=table_name2.column_name</code></td>
+<td align="left">用于返回两个表中的所有记录，不论是否匹配。</td>
+</tr>
+<tr>
+<td align="left"><strong>LIKE</strong></td>
+<td align="left"><code>SELECT column_name(s) FROM table_name WHERE column_name LIKE pattern</code></td>
+<td align="left">用于筛选匹配特定模式的记录。</td>
+</tr>
+<tr>
+<td align="left"><strong>ORDER BY</strong></td>
+<td align="left">SELECT column_name(s) FROM table_name ORDER BY column_name [ASC|DESC]</td>
+<td align="left">用于对结果集进行排序。 ASC 表示升序排列(默认),DESC 表示降序排列。</td>
+</tr>
+<tr>
+<td align="left"><strong>SELECT</strong></td>
+<td align="left"><code>SELECT column_name(s) FROM table_name</code></td>
+<td align="left">用于从表中选择数据。</td>
+</tr>
+<tr>
+<td align="left"><strong>SELECT</strong></td>
+<td align="left"><code>SELECT * FROM table_name</code></td>
+<td align="left">用于选择表中的所有列。</td>
+</tr>
+<tr>
+<td align="left"><strong>SELECT DISTINCT</strong></td>
+<td align="left"><code>SELECT DISTINCT column_name(s) FROM table_name</code></td>
+<td align="left">用于返回唯一不同的值。</td>
+</tr>
+<tr>
+<td align="left"><strong>SELECT INTO</strong></td>
+<td align="left"><code>SELECT * INTO new_table_name [IN externaldatabase] FROM old_table_nameSELECT column_name(s) INTO new_table_name [IN externaldatabase] FROM old_table_name</code></td>
+<td align="left">用于从一个表中选择数据并插入到新表中。</td>
+</tr>
+<tr>
+<td align="left"><strong>SELECT TOP</strong></td>
+<td align="left">SELECT TOP number|percent column_name(s) FROM table_name ORDER BY column_name [ASC|DESC]</td>
+<td align="left">从表中返回前指定数量的记录，可以指定绝对数量或百分比。</td>
+</tr>
+<tr>
+<td align="left"><strong>TRUNCATE TABLE</strong></td>
+<td align="left"><code>TRUNCATE TABLE table_name</code></td>
+<td align="left">用于删除表中的所有数据，但不删除表结构。</td>
+</tr>
+<tr>
+<td align="left"><strong>UNION</strong></td>
+<td align="left"><code>SELECT column_name(s) FROM table_name1 UNION SELECT column_name(s) FROM table_name2</code></td>
+<td align="left">用于合并两个或多个 SELECT 语句的结果集,不包含重复记录。</td>
+</tr>
+<tr>
+<td align="left"><strong>THE UNION OF ALL.</strong></td>
+<td align="left"><code>SELECT column_name(s) FROM table_name1 UNION ALL SELECT column_name(s) FROM table_name2</code></td>
+<td align="left">用于合并两个或多个 SELECT 语句的结果集,包含重复记录。</td>
+</tr>
+<tr>
+<td align="left"><strong>UPDATE</strong></td>
+<td align="left"><code>UPDATE table_name SET column1=value, column2=value, ... WHERE some_column=some_value</code></td>
+<td align="left">用于修改表中的现有记录。</td>
+</tr>
+<tr>
+<td align="left"><strong>WHERE</strong></td>
+<td align="left"><code>SELECT column_name(s) FROM table_name WHERE column_name operator value</code></td>
+<td align="left">用于过滤记录，指定查询条件。</td>
+</tr>
+</tbody></table>
+<h1 id="2-一些重要的-SQL-命令"><a href="#2-一些重要的-SQL-命令" class="headerlink" title="2.一些重要的 SQL 命令"></a>2.一些重要的 SQL 命令</h1><ul>
+<li><strong>SELECT</strong> - 从数据库中提取数据</li>
+<li><strong>UPDATE</strong> - 更新数据库中的数据</li>
+<li><strong>DELETE</strong> - 从数据库中删除数据</li>
+<li><strong>INSERT INTO</strong> - 向数据库中插入新数据</li>
+<li><strong>CREATE DATABASE</strong> - 创建新数据库</li>
+<li><strong>ALTER DATABASE</strong> - 修改数据库</li>
+<li><strong>CREATE TABLE</strong> - 创建新表</li>
+<li><strong>ALTER TABLE</strong> - 变更（改变）数据库表</li>
+<li><strong>DROP TABLE</strong> - 删除表</li>
+<li><strong>CREATE INDEX</strong> - 创建索引（搜索键）</li>
+<li><strong>DROP INDEX</strong> - 删除索引</li>
+</ul>
+<h1 id="3-常用的-SQL-语句和语法："><a href="#3-常用的-SQL-语句和语法：" class="headerlink" title="3.常用的 SQL 语句和语法："></a>3.常用的 SQL 语句和语法：</h1><p><strong>SELECT</strong>：用于从数据库中查询数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name(s)</span><br><span class="line">FROM table_name</span><br><span class="line">WHERE condition</span><br><span class="line">ORDER BY column_name [ASC|DESC]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>column_name(s)</code>: 要查询的列。</li>
+<li><code>table_name</code>: 要查询的表。</li>
+<li><code>condition</code>: 查询条件（可选）。</li>
+<li><code>ORDER BY</code>: 排序方式，<code>ASC</code> 表示升序，<code>DESC</code> 表示降序（可选）。</li>
+</ul>
+<p><strong>INSERT INTO</strong>：用于向数据库表中插入新数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO table_name (column1, column2, ...)</span><br><span class="line">VALUES (value1, value2, ...)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>table_name</code>: 要插入数据的表。</li>
+<li><code>column1, column2, ...</code>: 要插入数据的列。</li>
+<li><code>value1, value2, ...</code>: 对应列的值。</li>
+</ul>
+<p><strong>UPDATE</strong>：用于更新数据库表中的现有数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE table_name</span><br><span class="line">SET column1 = value1, column2 = value2, ...</span><br><span class="line">WHERE condition</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>table_name</code>: 要更新数据的表。</li>
+<li><code>column1 = value1, column2 = value2, ...</code>: 要更新的列及其新值。</li>
+<li><code>condition</code>: 更新条件。</li>
+</ul>
+<p><strong>DELETE</strong>：用于从数据库表中删除数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM table_name</span><br><span class="line">WHERE condition</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>table_name</code>: 要删除数据的表。</li>
+<li><code>condition</code>: 删除条件。</li>
+</ul>
+<p><strong>CREATE TABLE</strong>：用于创建新的数据库表。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE table_name (</span><br><span class="line">    column1 data_type constraint,</span><br><span class="line">    column2 data_type constraint,</span><br><span class="line">    ...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>table_name</code>: 要创建的表名。</li>
+<li><code>column1, column2, ...</code>: 表的列。</li>
+<li><code>data_type</code>: 列的数据类型（如 <code>INT</code>、<code>VARCHAR</code> 等）。</li>
+<li><code>constraint</code>: 列的约束（如 <code>PRIMARY KEY</code>、<code>NOT NULL</code> 等）。</li>
+</ul>
+<p><strong>ALTER TABLE</strong>：用于修改现有数据库表的结构。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE table_name</span><br><span class="line">ADD column_name data_type</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>table_name</code>: 要修改的表。</li>
+<li><code>column_name</code>: 要添加的列。</li>
+<li><code>data_type</code>: 列的数据类型。</li>
+</ul>
+<p>或：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE table_name</span><br><span class="line">DROP COLUMN column_name</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>column_name</code>: 要删除的列。</li>
+</ul>
+<p><strong>DROP TABLE</strong>：用于删除数据库表。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE table_name</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>table_name</code>: 要删除的表。</li>
+</ul>
+<p><strong>CREATE INDEX</strong>：用于创建索引，以加快查询速度。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CREATE INDEX index_name</span><br><span class="line">ON table_name (column_name)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>index_name</code>: 索引的名称。</li>
+<li><code>column_name</code>: 要索引的列。</li>
+</ul>
+<p><strong>DROP INDEX</strong>：用于删除索引。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DROP INDEX index_name</span><br><span class="line">ON table_name</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>index_name</code>: 要删除的索引名称。</li>
+<li><code>table_name</code>: 索引所在的表。</li>
+</ul>
+<p><strong>WHERE</strong>：用于指定筛选条件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name(s)</span><br><span class="line">FROM table_name</span><br><span class="line">WHERE condition</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>condition</code>: 筛选条件。</li>
+</ul>
+<p><strong>ORDER BY</strong>：用于对结果集进行排序。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name(s)</span><br><span class="line">FROM table_name</span><br><span class="line">ORDER BY column_name [ASC|DESC]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>column_name</code>: 用于排序的列。</li>
+<li><code>ASC</code>: 升序（默认）。</li>
+<li><code>DESC</code>: 降序。</li>
+</ul>
+<p><strong>GROUP BY</strong>：用于将结果集按一列或多列进行分组。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name(s), aggregate_function(column_name)</span><br><span class="line">FROM table_name</span><br><span class="line">WHERE condition</span><br><span class="line">GROUP BY column_name(s)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>aggregate_function</code>: 聚合函数（如 COUNT、SUM、AVG 等）。</li>
+</ul>
+<p><strong>HAVING</strong>：用于对分组后的结果集进行筛选。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name(s), aggregate_function(column_name)</span><br><span class="line">FROM table_name</span><br><span class="line">GROUP BY column_name(s)</span><br><span class="line">HAVING condition</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>condition</code>: 筛选条件。</li>
+</ul>
+<p><strong>JOIN</strong>：用于将两个或多个表的记录结合起来。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name(s)</span><br><span class="line">FROM table_name1</span><br><span class="line">JOIN table_name2</span><br><span class="line">ON table_name1.column_name = table_name2.column_name</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>JOIN</code>: 可以是 INNER JOIN、LEFT JOIN、RIGHT JOIN 或 FULL JOIN。</li>
+</ul>
+<p><strong>DISTINCT</strong>：用于返回唯一不同的值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT column_name(s)</span><br><span class="line">FROM table_name</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/08/14/SQL/" data-id="cmeatnupf00024kd63hiu61k6" data-title="SQL" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2025/04/21/%E5%B9%B3%E8%88%AA%E6%9D%AFWP/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">平航杯WP</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/08/">August 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/04/">April 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/08/14/SQL/">SQL</a>
+          </li>
+        
+          <li>
+            <a href="/2025/04/21/%E5%B9%B3%E8%88%AA%E6%9D%AFWP/">平航杯WP</a>
+          </li>
+        
+          <li>
+            <a href="/2025/04/10/%E9%BE%99%E4%BF%A1%E6%9D%AFwp/">龙信杯wp</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/25/SQL%E6%B3%A8%E5%85%A5%E5%9F%BA%E7%A1%80/">SQL注入基础</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/21/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2/">数据库查询</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
